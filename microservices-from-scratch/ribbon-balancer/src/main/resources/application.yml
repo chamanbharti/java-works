@@ -1,0 +1,8 @@
+my-app:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8080,localhost:8081,localhost:8082
+    serverListRefreshInterval: 15000
+server:
+  port: 8888

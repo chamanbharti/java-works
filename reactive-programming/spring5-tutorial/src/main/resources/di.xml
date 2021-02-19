@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- collaborators and configuration for this bean go here -->
+    
+   <!--  <bean id="bike" class="spring5.di.setter_constructor.Bike"></bean>  -->
+	<!-- equivalent 
+		Bike bike = new Bike();
+	 -->
+	 
+	<!--  <bean id="bike" class="spring5.di.setter_constructor.Bike">
+	 	<constructor-arg name="color" value="RED"></constructor-arg>
+	 </bean>  -->
+	<!-- equivalent 
+		Bike bike = new Bike("RED");
+	 -->
+	 
+	 <!--  <bean id="bike2" class="spring5.di.setter_constructor.Bike">
+	 	<property name="color" value="BLUE"></property>
+	 </bean>  -->
+	<!-- equivalent 
+		Bike bike2 = new Bike();
+		bike2.setColor("RED");
+	 -->
+	 
+	  <!--  <bean id="car" class="spring5.di.setter_constructor.Car">
+	 	<constructor-arg name="engine">
+	 		<bean class="spring5.di.setter_constructor.Engine"></bean>
+	 	</constructor-arg>
+	 </bean> --> 
+	 
+	 <bean id="engine" class="spring5.di.setter_constructor.Engine"></bean>
+	 
+	  <bean id="car" class="spring5.di.setter_constructor.Car">
+	 	<constructor-arg name="engine" ref="engine">
+	 	</constructor-arg>
+	 </bean>
+	<!-- equivalent 
+		Car car = new Car();
+		car.engine = new Engine();
+	 -->
+</beans>

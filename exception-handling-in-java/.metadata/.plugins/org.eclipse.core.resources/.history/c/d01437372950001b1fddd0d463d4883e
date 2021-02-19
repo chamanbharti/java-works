@@ -1,0 +1,36 @@
+package exception;
+
+class ReverseWord {
+
+	public static void main(String[] args) {
+		
+		
+		String s = "abc";
+		String s1 = new String("abc");
+		s=s+"India";
+		System.out.println(s);
+		String str = "I love my country";
+		//String str = "country my love I";
+		char[] chArray = str.toCharArray();
+		int ch=0;
+		String reverse = "";
+		for(int i=chArray.length-1;i>0;i--) {
+			ch++;
+			if(ch==32) {
+				
+			}
+			System.out.println(chArray[i]);
+		}
+		
+		/*
+		 * WAP to print all possible pairs in an array whose sum is a given number.
+			Array : {11, 5, 2, -3, 6, 3, -1}
+			Number : 8
+			11+5 = 16
+			5+2 = 7
+			2+(-3)=-1
+			-3+6=3;
+			3+(-1)=2
+				 */
+	}
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+  <!-- collaborators and configuration for this bean go here -->
+  
+  <!-- setter getter -->
+   <bean id="student" class="spring5.di.setter_constructor.Student">
+   	<property name="studentName" value="Chaman Bharti"></property>
+   	<property name="id" value="12"></property>
+   </bean> 
+  
+  
+  <!-- 
+  <bean id="student2" class="spring5.di.setter_constructor.Student">
+    <constructor-arg><value>Chaman</value></constructor-arg>
+   	<property name="studentName" value="Saheel Bharti"></property>
+   	<property name="id" value="120"></property>
+   	
+   </bean>  -->
+   
+     <!-- constructor -->
+    <!-- <bean id="student3" class="spring5.di.setter_constructor.Student">
+    <constructor-arg name="id" value="11" type="int"></constructor-arg>
+   	<constructor-arg name="studentName" value="Nasrin is my crux" type="String"></constructor-arg>
+   	
+   </bean>  -->
+
+</beans>

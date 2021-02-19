@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+        <context:annotation-config></context:annotation-config>
+  <!-- collaborators and configuration for this bean go here -->
+  
+  					<!--  manually -->
+ 	<!-- step 1 -->
+ <!--    <bean id="human" class="spring5.di.autowiring.Human">
+		    <property name="heart">
+		    	<bean id="heartObj" class="spring5.di.autowiring.Heart"></bean>
+		    </property>
+   		</bean>  -->
+   
+   <!-- step 2 -->
+<!-- 	<bean id="heartObj" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human">
+	    	<property name="heart" ref="heartObj"></property>
+   	</bean>  
+    -->
+    
+    				 <!--  automatically -->
+     <!--  using byName -->
+        <!-- <bean id="heart" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human" autowire="byName">
+   	    </bean>  -->
+   	    
+   	     <!--  using byType -->
+       <!--  <bean id="heartObj" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human" autowire="byType">
+   	    </bean>  -->
+   	    
+   	    <!--  using constructor -->
+        <!-- <bean id="heartObj" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human" autowire="constructor">
+   	    </bean>  -->
+   	    
+   	    <!-- By default the autowired is off. we need to activate it manually to use it -->
+     	<context:annotation-config></context:annotation-config>
+     	
+   	   <!--  <bean id="heartObj" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human"> @Autowired in code
+   	    </bean>  -->
+   	    
+   	    <!-- 
+   	        How @Autowired works?
+		    1. first it try to resolves with "byType".
+		    2. If byType fails then it goes with "byName"
+   	    -->
+   	    
+   	   <!--  <bean id="humanHeart" class="spring5.di.autowiring.Heart"></bean>
+   	     <bean id="octopusHeart" class="spring5.di.autowiring.Heart"></bean>
+	    <bean id="human" class="spring5.di.autowiring.Human"> @Autowired in code
+   	    </bean>  -->
+   	    <!--  here byType fails  -->
+   	     <!--  here byName fails also -->
+   	     
+   	      <!--  @Qualifier -->
+   	     <!--  <bean id="humanHeart" class="spring5.di.autowiring.Heart">
+   	      	<property name="nameOfAnimal" value="Human"></property>
+   	      	<property name="noOfHeart" value="1"></property>
+   	      </bean>
+   	      <bean id="octopusHeart" class="spring5.di.autowiring.Heart">
+   	      	<property name="nameOfAnimal" value="octopus"></property>
+   	      	<property name="noOfHeart" value="3"></property>
+   	      </bean>
+   	    
+	    <bean id="human" class="spring5.di.autowiring.Human"> @Autowired in code
+   	    </bean>  -->
+   	    
+   	    <bean id="dept1" class="spring5.di.setter_constructor.HRDept"> </bean> 
+   	    <bean id="dept2" class="spring5.di.setter_constructor.HRDept"> </bean> 
+   	     
+   	     <bean id="company" class="spring5.di.setter_constructor.Company"> </bean> 
+     	
+
+</beans>

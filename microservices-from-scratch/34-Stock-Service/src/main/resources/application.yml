@@ -1,0 +1,35 @@
+
+
+#spring:
+#  datasource:
+#   driver-class-name: com.mysql.cj.jdbc.Driver
+#   password: root
+#   url: jdbc:mysql://localhost:3306/hibernate
+#   username: root
+   
+#  jpa:
+#    properties:
+#      hibernate:
+#       dialect: org.hibernate.dialect.MySQLDialect
+#       format_sql: true
+#       show_sql: true
+
+spring:
+  datasource:
+   driver-class-name: org.h2.Driver
+   password: null
+   url: jdbc:h2:mem:testdb
+   username: sa
+
+  jpa:
+    properties:
+      hibernate:
+       format_sql: true
+       show_sql: true
+  application:
+    name: STOCK-PRICE-SERVICE
+       
+server:
+  port: 1111
+  
+ 

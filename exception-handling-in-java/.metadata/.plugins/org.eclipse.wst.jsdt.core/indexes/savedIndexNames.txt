@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\java_works_2020\exception-handling-in-java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+674884289.index
+3984211419.index
+3539579208.index
+444274692.index
+284269405.index
+2620497925.index

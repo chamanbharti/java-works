@@ -1,0 +1,21 @@
+package exception.ways;
+
+public class InputChecker {
+	
+	 	private int minLength;
+	    private int maxLength;
+
+	    public InputChecker(int minLength, int maxLength) {
+	        this.minLength=minLength;
+	        this.maxLength=maxLength;
+	    }
+	    
+	    public void checkStringLength(String input) throws InvalidLengthException{
+	    	int strLength = input.length();
+	    	if(strLength < minLength) {
+	    		throw new InvalidLengthException(strLength, "Input should have minimum "+minLength+" characters");
+	    	}
+	    }
+	public static void main(String[] args) {
+	}
+}

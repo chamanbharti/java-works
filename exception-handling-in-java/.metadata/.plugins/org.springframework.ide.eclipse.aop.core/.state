@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="friends"/>
+<aop-project name="4 friends"/>
+<aop-project name="mobile-app-ws-quick-start"/>
+<aop-project name="thinkweb"/>
+</aop-reference-model>

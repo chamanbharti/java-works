@@ -1,0 +1,13 @@
+package exception.ways;
+
+public class InputChecker {
+public static void main(String[] args) {
+	String[] x= {"AA","AAA"};
+	//System.out.println(x[0].length);
+	
+	int[] y;
+	y=new int[10];
+	int[][] z;
+	z=new int[10][];
+}
+}

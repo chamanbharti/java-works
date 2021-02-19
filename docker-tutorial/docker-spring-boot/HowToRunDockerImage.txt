@@ -1,0 +1,11 @@
+How to build and run docker  images
+-------------------------------------
+build:
+-------------------------------------
+docker build -f Dockerfile -t docker-spring-boot .
+note:( . means current directory)
+run:
+-------------------------------------
+docker run -p 8085:8085 docker-spring-boot
+
+https://dzone.com/articles/deploying-spring-boot-on-dockerhttps://dzone.com/articles/deploying-spring-boot-on-docker

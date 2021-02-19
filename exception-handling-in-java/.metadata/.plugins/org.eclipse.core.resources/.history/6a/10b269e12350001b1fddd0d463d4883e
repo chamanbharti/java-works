@@ -1,0 +1,8 @@
+package exception.ways;
+
+public class InputChecker {
+public static void main(String[] args) {
+	String[] x= {"AA","AAA"};
+	System.out.println(x.length);
+}
+}

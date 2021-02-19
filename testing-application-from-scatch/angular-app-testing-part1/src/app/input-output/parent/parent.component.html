@@ -1,0 +1,6 @@
+<h2>Parent App Component</h2>
+<label>Enter Parent AppComponent Value</label>
+<input type="text" #parentText (keyup)="0">
+<p>Value from Child AppComponent is: {{childData}} </p>
+
+<app-child [parentData]="parentText.value" (childEvent)="childData=$event" (greetEvent)="greet($event)"></app-child>

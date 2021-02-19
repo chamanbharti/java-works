@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Landon Hotel - Events &amp; Meetings</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <h1>Request an Estimate</h1>
+    
+    <form action="#" th:object="${quoteRequestForm}" th:action="@{/newquote}" method="post" class="inline">
+    
+    <ul th:if="${#fields.hasErrors('*')}" class="errors span-18">
+        <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Input is incorrect</li>
+    </ul>
+    
+    <fieldset>
+        <div class="span-8">
+        		<label for="eventType">Event Type</label>
+            
+            <input type="text" id="eventType" th:field="*{eventType}" />
+        </div>
+        
+        <div class="span-8">
+            <input type="submit" id="submitQuoteRequest" value="Submit" />
+        </div>
+    </fieldset>
+	</form>
+    
+</body>
+</html>

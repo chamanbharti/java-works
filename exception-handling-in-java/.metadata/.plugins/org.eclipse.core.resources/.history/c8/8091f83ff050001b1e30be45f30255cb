@@ -1,0 +1,24 @@
+package interview.array;
+
+public class PrintPairArrayWithSum {
+
+	public static void main(String[] args) {
+		int a[] = {1,7,2,5,3,4,3,5,9,11};
+		int n=a.length;
+		int sum = 8;
+		
+		printPairs(a,n,sum);
+	}
+
+	private static void printPairs(int[] a, int n, int sum) {
+		
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[i]+a[j]==sum) {
+					System.out.println("("+a[i]+"+"+a[j]+") ="+sum);
+				}
+			}
+		}
+		
+	}
+}

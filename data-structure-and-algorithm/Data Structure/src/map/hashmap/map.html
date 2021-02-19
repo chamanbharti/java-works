@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<script>
+			var map = new Map();
+			map.set(1,"jQuery");  
+			map.set(2,"AngularJS");  
+			map.set(3,"Bootstrap");
+			console.log("Size before invoking clear(): "+map.size);
+			//map.clear();
+			//console.log("Size after invoking clear(): "+map.size);
+			
+			//console.log("Element present before invoking clear(): "+map.has(2));
+			
+			//map.delete(2);
+			//console.log("Element present after invoking delete(): "+map.has(2));
+			
+			console.log("entries()");
+			var itr = map.entries();
+			console.log(itr.next().value);
+			console.log(itr.next().value);
+			console.log(itr.next().value);
+			console.log("entries() using loop")
+			
+			var itr = map.entries();
+			for(i=0;i<map.size;i++){
+				console.log(itr.next().value);
+			}
+			
+			console.log("forEach() for value only");
+			function display(values){
+				console.log(values);
+			}
+			map.forEach(display);
+			
+			console.log("forEach() for key-value");
+			function display1(values,key){
+				console.log(values+" "+key);
+			}
+			map.forEach(display1);
+			
+			console.log("get()");
+			console.log(map.get(1));
+			console.log(map.get(2));
+			console.log(map.get(3));
+			console.log(map.get(4));
+			
+			console.log("has()");
+			console.log(map.has(1));
+			console.log(map.has(4));
+			console.log(map.has());
+			console.log(map.has("jQuery"));
+			
+			console.log("keys()");
+			var itr = map.keys();	
+			for(i=0;i<map.size;i++){
+				console.log(itr.next().value);
+			}
+			
+			console.log("values()");
+			var itr = map.values();	
+			for(i=0;i<map.size;i++){
+				console.log(itr.next().value);
+			}
+			
+			
+		</script>
+	</head>
+</html>

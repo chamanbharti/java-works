@@ -1,0 +1,163 @@
+what is lambda expression
+1. To simplify programming
+2. To enable functional programming in java
+3. To write more readable, maintainable and concise code
+4. To use API,s very easily and effectively
+5. To enable parallel processing
+6. To utilize fucntional programming benefit in java
+...........................................
+In math
+It was invented in 1938
+these language uses
+LISP
+C
+C++
+Ruby
+Scala
+finally in java alos
+Javascript & TypeScript too
+............................
+It is an anonymous function
+	Nameless
+	without return type
+	without modifiers
+	
+	
+Very Very Very Easy concepts!!
+................................................
+normal method
+public void m1(){
+	System.out.println("Hello");
+}
+
+using lambda same code like below (arrow symbol shows lambda express)
+
+() -> {
+	System.out.println("Hello");
+}
+() -> System.out.println("Hello");
+
+multi line {} is required except single line, it is optional
+
+ex2:
+public void m1(int a,int b){
+System.out.println(a+b);
+}
+
+(int a,int b) -> System.out.println(a+b);
+(a,b) -> System.out.println(a+b);
+
+public int squareIt(int n){
+	return n*n;
+}
+
+(int n) -> {return n*n;} with {} return keyword is compulsory
+(int n) -> n*n;
+(n) -> n*n;
+n -> n*n; if argument is one then () is optional
+.......................................................
+n->return n*n;==>invalid
+n->{return n*n;}==>valid
+n->{return n*n;}==>invalid
+n->{n*n;};==>invalid
+n->n*n;==>valid
+
+without curly braces we cannot use return keyword. compiler will consider returned value automatically.
+within curly braces if we want to return some value compulsory we should use return statement
+
+public void m1(String s){
+ return s.length();
+ }
+ (String s) -> s.length();
+ 
+ (s) -> s.length();
+  s -> s.length();
+  
+  FI ==>Functional Interface
+  
+  word is new concept is old
+  Runnable ==> run()
+  Comparable==>compareTo()
+  CompareTo==>compare()
+  ActionListener==>actionPerform()
+  Callable==>call()
+  all above interface is FI e.i SAM(single abstract method)
+  
+ default method and static methods
+ interface inter{
+ public void m1();
+ default void m2{
+ }
+ public static void m3(){
+ }
+ 
+ @FunctionalInterface //not FI
+ interface inter{
+ 
+ default void m2{
+ }
+ 
+ public static void m3(){
+ }
+ 
+ Functional Interface wrt inheritance
+ 
+ Lambda expression with functional interface
+ 
+ Lambda Expressions Multithreading & Collections
+ Comparator
+int compare(Object obj1,object obj2)
+return -ve iff obj1 has to come before obj2
+return +ve iff obj1 has to come after obj2
+return 0 iff obj1 and obj2 are equal
+
+Lambda Expression 
+Functional Interface
+How FI to invoke Lambda Expression
+Lambda Expression for Multi threading and Collections
+Anonymous class vs lambda expression
+If employees class has employee id and salary then how to find second highest salary based on employees id
+Thread t = new Thread();
+Thread t = new Thread(){
+....
+};
+We are writing a class that extends Thread class
+Runnable r = new Runnable (){
+....
+};
+
+interface C{
+	void m1();
+	void m2();
+}
+public class LambdaExpression9 {
+
+	public static void main(String[] args) {
+		
+		C a = new C(){
+			
+				public void m1() {
+					System.out.println("m1()");
+				}
+				public void m2() {
+					System.out.println("m2()");
+				}
+		};
+		
+			
+		a.m1();
+		a.m2();
+		
+		for(int i=0;i<10;i++) {
+			System.out.println("Main Thread");
+			//throw new RuntimeException();
+		}
+	}
+}
+Anonynous inner class != Lambda expression
+If anonymous inner class implements an interface that contains 
+single abstract method then only we can replace that anonymous inner class with lambda
+
+
+
+ 

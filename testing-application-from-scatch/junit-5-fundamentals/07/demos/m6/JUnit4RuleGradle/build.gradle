@@ -1,0 +1,36 @@
+group 'com.pluralsight'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.0.1')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.1')
+
+    // For the JUnit 4 rule
+    testCompile('junit:junit:4.12')
+
+    // To support JUnit 4 rules in JUnit Jupiter
+    testCompile('org.junit.jupiter:junit-jupiter-migrationsupport:5.0.1')
+
+    // Only required to run tests in an IDE that bundles an older version (or no version at all)
+    testRuntime('org.junit.platform:junit-platform-launcher:1.0.1')
+    // To avoid compiler warnings about @API annotations in JUnit code
+    testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+}

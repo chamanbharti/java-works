@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3179" started-at="2020-06-22T21:43:47 IST" finished-at="2020-06-22T21:43:50 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3179" started-at="2020-06-22T21:43:47 IST" finished-at="2020-06-22T21:43:50 IST">
+      <class name="chapter02.hibernate.PersistenceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:chapter02.hibernate.PersistenceTest@57855c9a]" name="setup" is-config="true" duration-ms="2620" started-at="2020-06-22T21:43:47 IST" finished-at="2020-06-22T21:43:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="saveMessage()[pri:0, instance:chapter02.hibernate.PersistenceTest@57855c9a]" name="saveMessage" duration-ms="238" started-at="2020-06-22T21:43:49 IST" finished-at="2020-06-22T21:43:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveMessage -->
+        <test-method status="PASS" signature="readMessage()[pri:0, instance:chapter02.hibernate.PersistenceTest@57855c9a]" name="readMessage" duration-ms="252" started-at="2020-06-22T21:43:50 IST" depends-on-methods="chapter02.hibernate.PersistenceTest.saveMessage" finished-at="2020-06-22T21:43:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readMessage -->
+      </class> <!-- chapter02.hibernate.PersistenceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

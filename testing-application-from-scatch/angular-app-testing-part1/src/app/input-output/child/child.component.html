@@ -1,0 +1,6 @@
+<h2>Child AppComponent</h2>
+<label>Enter child app Component value</label>
+<input type="text" #childText (keyup)="onChange(childText.value)">
+<p>Value from Parent Component is :{{parentData}}</p>
+<p>Component Interaction</p>
+<button (click)="callParentGreet()">Greet</button>

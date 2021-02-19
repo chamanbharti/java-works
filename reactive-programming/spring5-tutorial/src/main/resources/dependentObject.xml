@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+  <!-- collaborators and configuration for this bean go here -->
+  
+ 
+    <!-- <bean id="student" class="spring5.di.dependentObject.Student">
+    <property name="id" value="1001"></property>
+    <property name="mathCheat">
+    	<bean class="spring5.di.dependentObject.MathCheat"></bean>
+    </property>
+   	
+   </bean> 
+   <bean id="anotherStudent" class="spring5.di.dependentObject.AnotherStudent">
+   <property name="cheat">
+   <bean class="spring5.di.dependentObject.MathCheat"></bean>
+   </property>
+   </bean>-->
+   
+   <bean id="mathCheatObject" class="spring5.di.dependentObject.MathCheat"></bean>
+ 
+    <bean id="student" class="spring5.di.dependentObject.Student">
+    <property name="id" value="1001"></property>
+    <property name="mathCheat" ref="mathCheatObject"></property>
+   	
+   </bean> 
+   <bean id="anotherStudent" class="spring5.di.dependentObject.AnotherStudent">
+   <property name="cheat" ref="mathCheatObject"></property>
+   </bean>
+
+</beans>

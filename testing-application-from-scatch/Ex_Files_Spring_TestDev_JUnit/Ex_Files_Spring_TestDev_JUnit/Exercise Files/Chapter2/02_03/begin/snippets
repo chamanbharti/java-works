@@ -1,0 +1,19 @@
+
+@RunWith(MockitoJUnitRunner.class)
+
+
+	@InjectMocks
+	private ContactsManagementService contactsManagementService;
+	
+	@Mock
+	private CustomerContactRepository customerContactRepository;
+	
+	
+	@Before
+    public void setup() {
+		MockitoAnnotations.initMocks(this);
+	}
+	
+	when(customerContactRepository.save(any(CustomerContact.class))).thenReturn(aMockContact);
+	
+	

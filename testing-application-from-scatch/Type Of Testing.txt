@@ -1,0 +1,12 @@
+Types Of Testing
+----------------
+1. Acceptance
+2. Integration
+3. System
+4. Regression
+5. Stress
+6. Recovery
+7. Load
+8. Unit
+9. Security
+10. Usability
