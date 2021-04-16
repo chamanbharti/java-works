@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		if(!!window.EventSource) {
+			var eventSource = new EventSource('products/events');
+			var eventList = document.querySelector('ul');
+			
+			eventSource.onMessage = function(e) {
+				var newElement = document.createElement("li");
+				newElement.textContent = "Event: "+e.data;
+				eventList.appendChild(newElement);
+			}
+		}else{
+			alert("The browser doesn't support SSE");
+		}
+	</script>
+</body>
+</html>

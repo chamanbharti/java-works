@@ -1,0 +1,120 @@
+
+<h3>Create Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name </label>
+
+      <input type="text" class="form-control" id="firstName"
+      required [(ngModel)]="employee.firstName"
+      #fName="ngModel"
+      name="firstName"
+      minlength="3"
+      pattern="^[A-Za-z ]+$" />
+
+      <ul class="text-danger list-unstyled" *ngIf="(fName.dirty || fName.touched) && fName.invalid">
+          <li *ngIf="fName.errors.required">
+            You must enter a first name
+          </li>
+          <li *ngIf="fName.errors.pattern">
+            First names can only contain letters and spaces
+          </li>
+          <li *ngIf="fName.errors.minlength">
+            First names must be at least
+            {{fName.errors.minlength.requiredLength}} characters
+          </li>
+        </ul>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name </label>
+      <input type="text" class="form-control" id="lastName"
+      required [(ngModel)]="employee.lastName" name="lastName"
+      #lName="ngModel"
+      minlength="3"
+      pattern="^[A-Za-z ]+$"
+      >
+      <ul class="text-danger list-unstyled" *ngIf="(lName.dirty || lName.touched) && lName.invalid">
+        <li *ngIf="lName.errors.required">
+          You must enter a last name
+        </li>
+        <li *ngIf="lName.errors.pattern">
+          Last name can only contain letters and spaces
+        </li>
+        <li *ngIf="lName.errors.minlength">
+          Last name must be at least
+          {{lName.errors.minlength.requiredLength}} characters
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">Mobile Number </label>
+      <input type="text" class="form-control" id="mobile"
+      required
+      #mobileNo="ngModel"
+      maxlength="10"
+      [pattern]="mobNumberPattern"
+      [(ngModel)]="employee.mobile" name="mobile">
+
+      <ul class="text-danger list-unstyled" *ngIf="(mobileNo.dirty || mobileNo.touched) && mobileNo.invalid">
+        <li *ngIf="mobileNo.errors.required">
+          Mobile Number is required
+        </li>
+        <li *ngIf="mobileNo.errors.pattern">
+          mobile number's first digit should start 7,8 and 9
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <label for="emailId">Email Id </label>
+      <input type="text" class="form-control" id="emailId"
+      required [(ngModel)]="employee.emailId" name="emailId"
+      pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+      #email="ngModel"
+      >
+
+      <ul class="text-danger list-unstyled" *ngIf="email.touched && email.invalid">
+        <li *ngIf="email.errors.required">
+          Email ID is required
+        </li>
+        <li *ngIf="email.errors.pattern">
+          Please enter valid email id!
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="dob">Date of Birth </label>
+      <input type="date" class="form-control" id="dob"
+      required [(ngModel)]="employee.dob" name="dob"
+      />
+    </div> -->
+
+    <div class="form-group">
+      <label for="dob">Date of Birth </label><br>
+      <mat-form-field>
+        <!-- <mat-label>Date of Birth</mat-label> -->
+        <input matInput [(ngModel)]="employee.dob" [matDatepicker]="picker"
+        [min]="minDate" [max]="maxDate" placeholder="DD-MM-YYYY"
+        name="dob"
+        >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+<style>
+  input.ng-dirty.ng-invalid { border: 2px solid #ff0000 }
+  input.ng-dirty.ng-valid { border: 2px solid #6bc502 }
+  </style>

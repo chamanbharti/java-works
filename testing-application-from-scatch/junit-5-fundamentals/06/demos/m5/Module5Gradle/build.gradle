@@ -1,0 +1,121 @@
+group 'com.pluralsight'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+sourceSets {
+    test {
+        output.resourcesDir = "build/classes/test"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.0.1')
+    testCompile('org.junit.jupiter:junit-jupiter-params:5.0.1')
+    testCompile('org.junit.jupiter:junit-jupiter-engine:5.0.1')
+
+    // Only required to run tests in an IDE that bundles an older version (or no version at all)
+    testRuntime('org.junit.platform:junit-platform-launcher:1.0.1')
+    // To avoid compiler warnings about @API annotations in JUnit code
+    testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+}
+
+junitPlatform {
+//    logManager 'org.apache.logging.log4j.jul.LogManager'
+//    reportsDir file('build/test-results/junit-platform') // this is the default
+//    enableStandardTestTask false
+
+//    selectors {
+//        uris 'file:///foo.txt', 'http://example.com/'
+//        uri 'foo:resource'
+//        files 'foo.txt', 'bar.csv'
+//        file 'qux.json'
+//        directories 'foo/bar', 'bar/qux'
+//        directory 'qux/bar'
+//        packages 'com.acme.foo', 'com.acme.bar'
+//        aPackage 'com.wiredbraincoffee.reward.tests'
+//        classes 'com.acme.Foo', 'com.acme.Bar'
+//        aClass 'com.example.app.Application'
+//        methods 'com.acme.Foo#a', 'com.acme.Foo#b'
+//        method 'com.example.app.Application#run(java.lang.String[])'
+//        resources '/bar.csv', '/foo/input.json'
+//        resource '/com/acme/my.properties'
+//    }
+//    configurationParameter 'junit.jupiter.conditions.deactivate', '*'
+//    configurationParameters([
+//            'junit.jupiter.extensions.autodetection.enabled': 'true',
+//            'junit.jupiter.testinstance.lifecycle.default': 'per_class'
+//    ])
+//
+//    filters {
+//        engines {
+//            // include 'junit-jupiter', 'junit-vintage'
+//            // exclude 'custom-engine'
+//        }
+//        tags {
+//            include 'Interface'
+//            exclude 'slow'
+//        }
+//        packages {
+//          include 'com.sample.included1', 'com.sample.included2'
+//            include 'com.wiredbraincoffee.reward.tests'
+//          exclude 'com.sample.excluded1', 'com.sample.excluded2'
+//        }
+//        includeClassNamePattern '.*Test.*'
+//        includeClassNamePatterns '.*Test', '.*Tests'
+//    }
+}
+
+afterEvaluate {
+    def junitPlatformTestTask = tasks.getByName('junitPlatformTest')
+
+    // configure jacoco to analyze the junitPlatformTest task
+    jacoco {
+        // this tool version is compatible with
+        toolVersion = "0.7.9"
+        applyTo junitPlatformTestTask
+    }
+
+    // create junit platform jacoco task
+    task(type: JacocoReport, "junitPlatformJacocoReport",
+            {
+                reports {
+                    xml.enabled true
+                    xml.destination "${buildDir}/reports/jacoco/report.xml"
+                    csv.enabled true
+                }
+                sourceDirectories = files("./src/main")
+                classDirectories = files("$buildDir/classes/main")
+                executionData junitPlatformTestTask
+            })
+    task(type: JacocoCoverageVerification , "junitPlatformJacocoVerification",
+            {
+                violationRules {
+                    rule {
+                        limit {
+                            minimum = 0.9
+                        }
+                    }
+                }
+                sourceDirectories = files("./src/main")
+                classDirectories = files("$buildDir/classes/main")
+                executionData junitPlatformTestTask
+            })
+}

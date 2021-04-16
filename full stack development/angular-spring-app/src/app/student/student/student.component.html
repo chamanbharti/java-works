@@ -1,0 +1,64 @@
+<div class="alert alert-danger col-10" *ngIf="studentExist">
+    Student's Email:<b>{{student.email}}</b> already exists!!
+</div>
+<div class="alert alert-success col-10" *ngIf="isCreated">
+    Congratulations your account was created!!
+</div>
+
+<form (ngSubmit)="createStudent()">
+
+    <div class="form-group">
+        <label for="email" class="col-2 form-label">Email</label>
+        <div class="col-10">
+            <input type="email" [(ngModel)]="student.email" name="email" id="email" class="form-control">
+        </div>
+        <div class="col-10" *ngIf="studentError?.email">
+            <span class="text-danger">{{studentError.email}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-2 form-label">Name</label>
+        <div class="col-10">
+            <input type="text" [(ngModel)]="student.name" name="name" id="name" class="form-control">
+        </div>
+        <div class="col-10" *ngIf="studentError?.name">
+            <span class="text-danger">{{studentError.name}}</span>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="password" class="col-2 form-label">Password</label>
+        <div class="col-10">
+            <input type="password" [(ngModel)]="student.password" name="password" id="password" class="form-control">
+        </div>
+        <div class="col-10" *ngIf="studentError?.password">
+            <span class="text-danger">{{studentError.password}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="age" class="col-2 form-label">Age</label>
+        <div class="col-10">
+            <input type="text" [(ngModel)]="student.age" name="age" id="age" class="form-control">
+        </div>
+        <div class="col-10" *ngIf="studentError?.age">
+            <span class="text-danger">{{studentError.age}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mobile" class="col-2 form-label">Mobile Number</label>
+        <div class="col-10">
+            <input type="text" [(ngModel)]="student.phoneNumber" name="mobile" id="mobile" class="form-control">
+        </div>
+        <div class="col-10" *ngIf="studentError?.phoneNumber">
+            <span class="text-danger">{{studentError.phoneNumber}}</span>
+        </div>
+    </div>
+
+    <input type="submit" value="Create Student" class="btn btn-success">
+
+
+</form>

@@ -1,0 +1,175 @@
+Distributed Application
+Distributed Technologies
+Rest Archetecture Principles
+Rest Archetecture
+HTTP Protocols
+Status Codes
+Status Messages
+Request Message Structure
+Response Message Structure
+GetMapping
+PostMapping
+PutMapping
+PatchMapping
+DeleteMapping
+Json & Jackson
+xml & jax-b
+consumes
+produces
+hateos
+Rest Clients
+java.net.client
+RestTemplate
+Webclient
+Synchronous
+Asynchronous
+Postman
+Swagger & Swagger UI
+ExceptionHandling
+
+-----------------------------------------------
+Microservices
+Pre-Requisite : RESTFul Services (Spring with REST)
+---------------------------------------------------
+Course Content
+--------------
+1) Monolith Architecture
+2) Drawback of Monolith Architecture
+3) Load Balncing (Cluster)
+4) Load Balancing Algorithms
+	 -- Sticky Session
+	--Round Robbing
+	--IP Hashing
+5) Introduction to Microservices
+6) Challenges in Microserivces
+7) Advantages of going for microservices
+8) microservices architecture
+9) Service registry(Eureka)
+10) API Gateway(Zuul)
+11) 2 Microservices
+12) Interservice communication(FeignClient)
+13) Embedded DB (h2)
+14) Actuators
+15) Cloud Platforms
+		- IAAS
+		- SAAS
+		- PAAS
+16) PCF(Pivotal Cloud Foundry)
+17) PCF Account Creation
+18) PCF CLI installation
+19) Deploying Microservices to PCF Cloud
+20) Hystrix (Circuit Breaker)
+21) Spring Boot Admin & Client
+22) Distributed logging using Sleuth & Zipkin
+23) Exception Handling in microservices
+24) Security in microservices(OAuth & JWT)
+25) Connecting to multiple Database
+26) Config server
+27) Apache Kafka
+28) Redis Cache
+29) Integration with MongoDB
+30) Integration with Angular 10
+31) AWS Deployment
+32) SOAP Provider Development using SpringBoot
+33) Consuming SOAP Provider using SpringBoot
+34) Docker
+35) Unit Testing using  Junit & Mocking
+36) Mono & Flux Objects using Reactive Programming
+37) Scaling (Vertical & Horizontal)
+38) Auto Scaling
+
+1) Monolith Architecture
+--------------------------
+-> In our application, we will have several modules and several components also be available
+
+Components:
+----------
+->Presentation components: Responsible for user interface
+->Web components: Responsible to handle user requests
+->Business components: Responsible to execute business logic
+->Persistence components: Responsible for db operations
+->Integration components: Responsible for webserverces/rest api communications 
+->Authorization components: Responsible for authorizing user
+->Notification Components: Responsible for sending email/mobile messages notification whenever required.
+
+->If we develop all these components as single project then it  is called as monolith architecture based project.
+
+Benefits of Monolith Architecture
+---------------------------------
+->Simple for development: At initial state it is very easy
+->Easy for testing: End to end testing we can perform
+-> Easy for deployment: one war file only we have to deploy
+-> Easy for scaling: Multiple server we can spin easily
+
+Drawbacks of Monolith Architecture
+--------------------------------
+->Maintenance: If application is too large and complex to understand, making changes for enhancement and CR is very difficult.
+(Lot of impact analysis is required)
+->Adopting to new technology is very difficult.
+->The size of the application can increase application startup time.
+->Realiablity: If there is bug in one module, then it leads to entire application will go down.
+->We must redeploy entire application when we make some changes to code.
+->Quick realease are not possible
+->New team members can not understand the project easily
+
+3) Load Balancer & LB Algos
+----------------------------------
+-> When all components are in same application, all requests comes to same server then burden will increase on server.
+-> To reduce burdern on the server, people will we use load balancers for applications.
+-> Our application will be deployed to multiple servers and all those servers will connected load balancer.
+
+How Load Balancer will distribute the load?? 
+===============================================
+LBR will use algorithm to distribute incoming to requests to server
+1) Round Robbin
+2) Sticky Session
+3) IP Hashing etc...
+
+5) Microservices Introduction
+-------------------------------------
+-> Ms is not a technology
+-> Ms is not a framework
+-> Ms is not an api
+-> Ms is an Architectural Design Pattern
+-> Ms design pattern came into market to avoid the problems of Monolith Architecture.
+-> This design patterns talks about how to design our project architecture and how to develop our project
+-> The main aim of Ms architecture is 'Divide & Conqure'
+
+6) Challenges with Microserivces
+---------------------------------------
+1) Bounded Context:  it is very difficult to decide boundary for one microservice.
+ Deciding which functionality should be developed in one microservice is difficult.
+2) Lot of configuration: As we are developing one project as multiple services, in every service we have  to configuration 
+like db config, Actuator config, SMTP config, Kafka config, Security config, Logging config etc...
+3) Less visibility: All the team members may not get the chance to work with all microservice hence they will not have complete clarity on project.
+
+4) Pack of cards problem: If any main microservice is failed then the dependent microservices also going to be failed.
+
+
+7) Advantages of microservices
+--------------------------------
+1) Easy Maintenace: AS we are dividing our project functionality into multiple microservices it is easy to maintain
+2) Faster Releases: As we are developing limited functionality very quickly we can complete development and testing then immediately we can release our microservices.
+3) Parallel Development: Multiple team can work on multiple services development parallely.
+4 Adopting new technology: There is no rule saying all microserices should be implemented using same programming language.
+we can use different technologies to develop our microserivices.
+5) Easy Scale: We can scale our microservices based projects easily.
+
+8) microservices architecture
+-----------------------------
+Note: There is no fixed architecture for this. People are using microservice architecture according to their comfort.
+-> Here we will talk about generalized microservices architecture that most of the people will follow in project
+development.
+
+Microservices Architecture Components
+-------------------------------------
+1) Service Registry (Eureka Server)
+2) Microservices (Rest API)
+3) API Gateway (Zuul Proxy)
+What is service Registry
+-----------------------
+-> Service registry is used to register services available in our project.
+-> Service registry will provide a dashboard with services information like status,health & url etc.
+-> One service nothing but one Rest API
+-> We can use Eureka Server as a Service Registry
+

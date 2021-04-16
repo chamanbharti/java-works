@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="16" skipped="0" failures="0" errors="0" time="0.078" hostname="DESKTOP-6HC5VRO" timestamp="2017-10-18T19:07:54">
+<properties>
+<property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+<property name="file.encoding" value="windows-1252"/>
+<property name="file.encoding.pkg" value="sun.io"/>
+<property name="file.separator" value="\"/>
+<property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+<property name="java.class.path" value="C:\Users\eh\Desktop\Module3Gradle\build\classes\test;C:\Users\eh\Desktop\Module3Gradle\build\resources\test;C:\Users\eh\Desktop\Module3Gradle\build\classes\main;C:\Users\eh\Desktop\Module3Gradle\build\resources\main;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.0.1\30fbf4448c594cb45d8e91630d6bb7f465906b88\junit-jupiter-api-5.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.0.1\57cceb0792e9ad0e32399bc7a30e230b078f63e1\junit-jupiter-params-5.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.0.1\e22d2bf87f43fb03fee14dea447b2a14f41b095f\junit-jupiter-engine-5.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-launcher\1.0.1\5562631a34e4eefefdad04cdd49a50774d6ac777\junit-platform-launcher-1.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.0.0\6f09c598e9ff64bf0ce2fa7e7de49a99ba83c0b4\opentest4j-1.0.0.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.0.1\3632e4a74a43d3ae8d29e6fa172cbc29590bda03\junit-platform-commons-1.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.0.1\4ce0a37866312c18ea3f45818f2faec077e46e0\junit-platform-engine-1.0.1.jar;C:\Users\eh\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-console\1.0.1\3892e08f30d92a88addc73f3a5f9575be864cec\junit-platform-console-1.0.1.jar"/>
+<property name="java.class.version" value="52.0"/>
+<property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\endorsed"/>
+<property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+<property name="java.home" value="C:\Program Files\Java\jdk1.8.0_144\jre"/>
+<property name="java.io.tmpdir" value="C:\Users\eh\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk-9\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Gradle\gradle-4.1\bin;C:\apache-maven-3.5.0\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Users\eh\AppData\Local\Android\sdk\platform-tools;C:\Users\eh\AppData\Local\Android\sdk\tools;C:\Users\eh\AppData\Local\Android\sdk\tools\bin;C:\Users\eh\AppData\Local\Microsoft\WindowsApps;C:\Users\eh\AppData\Local\GitHubDesktop\bin;C:\Users\eh\AppData\Roaming\npm;."/>
+<property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+<property name="java.runtime.version" value="1.8.0_144-b01"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="1.8"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="http://java.oracle.com/"/>
+<property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+<property name="java.version" value="1.8.0_144"/>
+<property name="java.vm.info" value="mixed mode"/>
+<property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="1.8"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="25.144-b01"/>
+<property name="line.separator" value="
+"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 10"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\classes"/>
+<property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.desktop" value="windows"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --details NONE --scan-class-path C:\Users\eh\Desktop\Module3Gradle\build\classes\main;C:\Users\eh\Desktop\Module3Gradle\build\resources\main;C:\Users\eh\Desktop\Module3Gradle\build\classes\test;C:\Users\eh\Desktop\Module3Gradle\build\resources\test -n ^.*Tests?$ --reports-dir C:\Users\eh\Desktop\Module3Gradle\build\test-results\junit-platform"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\eh\Desktop\Module3Gradle"/>
+<property name="user.home" value="C:\Users\eh"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="eh"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="America/Mexico_City"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="Valid Id" classname="Container for ID 2" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#1]/[dynamic-test:#1]
+display-name: Valid Id
+]]></system-out>
+</testcase>
+<testcase name="Discount applied" classname="Test" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#1]/[dynamic-container:#2]/[dynamic-test:#1]
+display-name: Discount applied
+]]></system-out>
+</testcase>
+<testcase name="Valid Id" classname="Container for ID 3" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#2]/[dynamic-test:#1]
+display-name: Valid Id
+]]></system-out>
+</testcase>
+<testcase name="Discount applied" classname="Test" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#2]/[dynamic-container:#2]/[dynamic-test:#1]
+display-name: Discount applied
+]]></system-out>
+</testcase>
+<testcase name="Valid Id" classname="Container for ID 4" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#3]/[dynamic-test:#1]
+display-name: Valid Id
+]]></system-out>
+</testcase>
+<testcase name="Discount applied" classname="Test" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#3]/[dynamic-container:#2]/[dynamic-test:#1]
+display-name: Discount applied
+]]></system-out>
+</testcase>
+<testcase name="Valid Id" classname="Container for ID 5" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#4]/[dynamic-test:#1]
+display-name: Valid Id
+]]></system-out>
+</testcase>
+<testcase name="Discount applied" classname="Test" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:dynamicTestsWithContainers()]/[dynamic-container:#4]/[dynamic-container:#2]/[dynamic-test:#1]
+display-name: Discount applied
+]]></system-out>
+</testcase>
+<testcase name="Testing product ID 1327" classname="giftProductNotInOrder()" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:giftProductNotInOrder()]/[dynamic-test:#1]
+display-name: Testing product ID 1327
+]]></system-out>
+</testcase>
+<testcase name="Testing product ID 1171" classname="giftProductNotInOrder()" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:giftProductNotInOrder()]/[dynamic-test:#2]
+display-name: Testing product ID 1171
+]]></system-out>
+</testcase>
+<testcase name="Testing product ID 1941" classname="giftProductNotInOrder()" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:giftProductNotInOrder()]/[dynamic-test:#3]
+display-name: Testing product ID 1941
+]]></system-out>
+</testcase>
+<testcase name="Testing product ID 1061" classname="giftProductNotInOrder()" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:giftProductNotInOrder()]/[dynamic-test:#4]
+display-name: Testing product ID 1061
+]]></system-out>
+</testcase>
+<testcase name="Testing product ID 1939" classname="giftProductNotInOrder()" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip03.RewardByGiftServiceDynamicTest]/[test-factory:giftProductNotInOrder()]/[dynamic-test:#5]
+display-name: Testing product ID 1939
+]]></system-out>
+</testcase>
+<testcase name="discountShouldBeApplied(long, TestInfo, TestReporter)" classname="discountShouldBeApplied(long, TestInfo, TestReporter)" time="0.015">
+<system-out>
+Report Entry #1 (timestamp: 2017-10-18T19:07:54.456)
+	- ProductID: 2
+</system-out>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip05.RewardByGiftServiceParameterizedTest]/[test-template:discountShouldBeApplied(long, org.junit.jupiter.api.TestInfo, org.junit.jupiter.api.TestReporter)]/[test-template-invocation:#1]
+display-name: [1] 2
+]]></system-out>
+</testcase>
+<testcase name="discountShouldBeApplied(long, TestInfo, TestReporter)" classname="discountShouldBeApplied(long, TestInfo, TestReporter)" time="0">
+<system-out>
+Report Entry #1 (timestamp: 2017-10-18T19:07:54.456)
+	- ProductID: 3
+</system-out>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip05.RewardByGiftServiceParameterizedTest]/[test-template:discountShouldBeApplied(long, org.junit.jupiter.api.TestInfo, org.junit.jupiter.api.TestReporter)]/[test-template-invocation:#2]
+display-name: [2] 3
+]]></system-out>
+</testcase>
+<testcase name="discountShouldBeApplied(long, TestInfo, TestReporter)" classname="discountShouldBeApplied(long, TestInfo, TestReporter)" time="0">
+<system-out>
+Report Entry #1 (timestamp: 2017-10-18T19:07:54.456)
+	- ProductID: 4
+</system-out>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.wiredbraincoffee.reward.clip05.RewardByGiftServiceParameterizedTest]/[test-template:discountShouldBeApplied(long, org.junit.jupiter.api.TestInfo, org.junit.jupiter.api.TestReporter)]/[test-template-invocation:#3]
+display-name: [3] 4
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

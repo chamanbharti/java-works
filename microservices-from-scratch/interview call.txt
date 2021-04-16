@@ -1,0 +1,23 @@
+Job description
+Dear Candidate,
+Greetings from Virtual Intelligence Please visit us at	www.virtualintelligenceonline.com	to know 
+more about us.
+We have a requirement of	Full Stack - JAVA Developer/Lead	.
+Role: Full Stack - JAVA Developer
+Desired Industry Experience:	2-3 years.
+Relevant Experience:	Java 8, spring 5 (MVC, Data, Security), Spring Boot 2.0+, Angular 5+, Html 5
+Job Description:
+	2+ years’ experience with complex IT solutions in an international company.
+	Experience in Java 8, spring MVC, Spring Boot.
+	Excellent troubleshooting and analytical skills, ability to handle multiple complex problems.
+	Shows initiative in developing his or her skills.
+	Ability to work well as part of a team and prioritize work.
+	Enthusiastically tackles challenging assignments.
+	Excellent verbal and written communication skills.
+	Ability to work on own initiative and creative mind-set.
+	Good team working skills; keen to share knowledge with others.
+ONLY immediate joiners
+	Total years of experience:
+	Relevant years of experience in Java8:
+	Relevant years of experience in Spring 5 (MVC, Data, Security):
+	Relevant years of experience : Mongo DB

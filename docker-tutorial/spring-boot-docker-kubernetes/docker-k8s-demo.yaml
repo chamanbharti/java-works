@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-k8s-demo
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-demo
+    spec:
+      containers:
+        - name: docker-k8s-demo
+          image: chamanbharti/spring-boot-docker-kubernetes
+          ports:
+            - containerPort: 8080

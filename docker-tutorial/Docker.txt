@@ -1,0 +1,62 @@
+ 			   Date : 10/08/2020
+			Spring Boot using Docker
+			      Mr. RAGHU
+	-------------------------------------------------------------
+FB    : https://www.facebook.com/groups/thejavatemple/
+Email : javabyraghu@gmail.com
+
+			Develop-> Build     -> Deploy
+			 Code  -> .jar/.war -> Place in Server and Run 
+
+Deployment: It is a process of setting all required s/w and starting application under
+             one runtime Environment.
+=> Runtime Environment is Operating System(OS)/Platform Dependent.
+   It means Softwares Required to run our application are fully OS Dependent.
+   Ex: Java S/w, Server Tomcat, Database MySQL...etc
+
+=> Our application is working fine in DevMachine(ex: Platform is Windows), may or may not 
+   work properly in other Platform (ex: Linux, Mac..etc).
+
+=> So, Solution is : DO NOT RUN OUR APPLICATION/SERVICES on Direct OS (Win/Linux/Mac..)
+   Use Virtual Platform that supports to run application any where
+   (no version or no installer modification required).
+
+=> Above Virtual Platform concept if we use, then What exactly running in Our Dev Machine
+   will same work in QA, UAT, Production (even Cloud AWS,PCF,..etc).
+
+**** Docker : 
+-> Platform (Virtual OS)
+-> It makes our Application/Services makes OS independent.
+-> Our Application/Services must present in Image Format.
+-> Here Image/Docker Image is like Exectable file for a Docker OS.
+
+=> Code/JAR      -> Image
+   Tomcat Server -> Image
+   MySQL Server  -> Image
+   
+=> Docker Container - Executing all required Images in Docker, then one runtime setup is
+                      created which is called as Container.
+
+
+=> Once Docker Image is created then we are going to place our image inside DockerHub
+   (hub.docker.com) by using ACTIONS like PUSH and PULL.
+
+-----------Working with-----------------------------------------------------------------
+1. Create one Account in DockerHub (Register and Login)
+   https://hub.docker.com/
+
+2. Write one Spring Boot Application
+
+3. Create Docker File in our application
+
+4. Download and Install Docker S/w in our System
+
+5. Start Docker s/w and run docker commands
+  a. Creating Docker Images
+  b. Check other images
+  c. Run image as Container
+  d. Login to DockerHub
+  e. PUSH or PULL with DockerHub
+  f. logout
+
+6. Stop Docker Server.

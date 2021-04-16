@@ -1,0 +1,120 @@
+			  Date : 11/08/2020
+			Spring Boot with Docker-2
+			      Mr. Raghu
+		----------------------------------------------
+FB:
+https://www.facebook.com/groups/thejavatemple/
+Email:
+javabyraghu@gmail.com
+
+a) Dockerhub Account Creation:
+
+1. Goto DockerHub website
+  https://hub.docker.com/
+2. Register and Login
+3. Create Repository
+> Click on Button 'Create Repository'
+> Enter any name : ex: nitrepotest
+> Choose Public Option
+> Click on create button
+  <username>/<repositoryName> =>  javabyraghu/nitrepotest
+
+-------------------------------
+b) Spring Boot Application
+
+1. Use STS and create one Starter Project
+2. Write some code (Ex: RestController)
+3. Build (.jar/.war) 
+  > Right click on Project > Run as Maven Clean
+  > Right click on Project > Run as Maven Install
+  > Right click on Project > Refresh
+
+4. Under target folder, we can find our project jar/war
+
+*)Note:- To run executable jar, command is:
+cmd> java -jar  <FileName>.jar
+cmd> java -jar  SpringBootDockerTest-1.0.jar
+
+--------------------------------------
+c) Create one Dockerfile 
+
+> Right click on project > new > File
+> Enter file name : Dockerfile
+> Enter details
+
+#FROM <image>
+FROM openjdk:8
+# Temp Run location
+VOLUME /tmp
+# Provide Port Information
+EXPOSE 8080
+#Jar Location to mapping name
+ADD target/SpringBootDockerTest-1.0.jar SpringBootDockerTest-1.0.jar
+#Jar Execution command
+ENTRYPOINT ["java","-jar","/SpringBootDockerTest-1.0.jar"]
+
+---------------------------------------------------
+d) Download and Install Docker Toolbox 
+
+1. Download Link
+ https://github.com/docker/toolbox/releases
+2. click on:  DockerToolbox-19.03.1.exe
+3. Install
+4. Double click on : 'Docker Quickstart Terminal' to start
+
+------------------------------------
+e) Docker Commands
+1. Change Location to Project folder
+
+$ cd F:/SpringBoot_Tasks/SpringBootDockerTest
+
+2. Create Docker image
+
+$ docker build -f Dockerfile -t <tagName> <location>
+$ docker build -f Dockerfile -t springbootbockertest .
+
+Tage created successfully : <imageName>:<tagVersion>
+ex:                         springbootbockertest:latest
+
+3. Check existed images
+$ docker image ls
+
+4. ** Run image
+$ docker run -p <maskedPort>:<actualPort> image
+$ docker run -p 9090:8080 springbootbockertest
+
+5. Check using browser
+http://<dockerIP>:<PORT>/Path
+http://192.168.99.100:9090/show
+
+---------------------------------------
+f) Dockerhub push/pull
+
+1. Login to Docker account
+
+$ docker login
+Username:
+Password:
+Login Succeeded
+
+
+2. Create a tag , that link our local file and Remote Repository
+
+$ docker tag <image>  <username>/<repository>:<tagName>
+
+$ docker tag springbootbockertest javabyraghu/nitrepotest:latest
+
+
+3. Puh into Dockerhub
+$ docker push <username>/<repository>:<tagName>
+$ docker push javabyraghu/nitrepotest:latest
+
+4. pull existed image from docker to local
+
+$ docker pull <username>/<repository>:<tagName>
+$ docker pull javabyraghu/mytestrepo:latest
+
+5. logout from dockerhub
+$ docker logout
+$ docker exist
+------------------------------------------------
