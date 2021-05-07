@@ -1,9 +1,9 @@
-package java8.streams;
+package com.java8.streams;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
-public class Stream {
+public class Stream1 {
 
 	public static void main(String[] args) {
 //		String[] names = { "XML", "Java", "SQL", "CSS" };

@@ -1,4 +1,4 @@
-package java8.streams.terminal;
+package com.java8.streams.terminal;
 
 import java.util.ArrayList;
 import java.util.List;

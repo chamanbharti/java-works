@@ -1,4 +1,4 @@
-package java8.streams;
+package com.java8.streams;
 
 interface Interf{
 	public int square(int n);

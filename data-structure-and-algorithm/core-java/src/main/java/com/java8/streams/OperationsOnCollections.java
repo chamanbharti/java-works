@@ -40,39 +40,43 @@ public class OperationsOnCollections {
 		
 		Stream<String> stream = words.stream();
 		// As an anonymous class
-		stream.forEach((new Consumer<String>() {
-		    public void accept(String t) {
-		        System.out.println(t);
-		    }
-		}));
+		stream.forEach(
+				(new Consumer<String>() {
+				    public void accept(String t) {
+				        System.out.println(t);
+				    }
+				})
+		 );
 		
 		// As a lamba expression
 		//stream.forEach(t -> System.out.println(t));
 		
-		//
-		/*
-		 Of course, the advantage of using streams is that you can chain operations.
-		words.sorted()
-		.limit(2)
-		.forEach(System.out::println);
-		Remember that because this is a terminal operation, you cannot do things like this:
+		// Of course, the advantage of using streams is that you can chain operations.
+//		words.sorted()
+//		.limit(2)
+//		.forEach(System.out::println);
+		
+		//Remember that because this is a terminal operation, you cannot do things like this:
 		words.forEach(t -> System.out.println(t.length()));
 		words.forEach(System.out::println);
 		
-		If you want to do something like that, either create a new stream each time:
+		//If you want to do something like that, either create a new stream each time:
+//		Stream.of(words).forEach(t -> System.out.println(t.length()));
+//		Stream.of(words).forEach(System.out::println);
 		
-		Stream.of(wordList).forEach(t -> System.out.println(t.length()));
-		Stream.of(wordList).forEach(System.out::println);
-		
-		*/
 		System.out.println("Or wrap the code inside one lambda:");
 		Consumer<String> print = t -> {
 		    System.out.println(t.length());
 		    System.out.println(t);
 		};
 		words.forEach(print);
+		
 		/*
-		Also, you can't use return, break or continue to terminate an iteration either. break and continue will generate a compilation error since they cannot be used outside of a loop and return doesn't make sense when we see that the foreach method is implemented basically as:
+		Also, 
+		you can't use return, break or continue to terminate an iteration either. 
+		break and continue will generate a compilation error 
+		since they cannot be used outside of a loop and return doesn't make sense 
+		when we see that the foreach method is implemented basically as:
 
 			for (T t : this) {
 			   // Inside accept, return has no effect
@@ -83,6 +87,7 @@ public class OperationsOnCollections {
 
 			You normally do this either by copying the matching elements to another collection:
 */
+		
 			List<String> nonEmptyWords = new ArrayList<String>();
 			for(String w : words) {
 			    if(w != null && !w.isEmpty()) {
@@ -90,7 +95,9 @@ public class OperationsOnCollections {
 			    }
 			}
 			System.out.println(nonEmptyWords);
-		//	Or by removing the non-matching elements in the collection itself with an iterator (only if the collection supports removal):
+			
+		//	Or by removing the non-matching elements in the collection itself with an iterator 
+		// (only if the collection supports removal):
 
 			for (Iterator<String> it = words.iterator(); it.hasNext();) {
 			    String w = it.next();
@@ -98,6 +105,7 @@ public class OperationsOnCollections {
 			        it.remove();
 			    }
 			}
+			
 			/*
 			For these cases, you can use the filter method of the Stream interface:
 
@@ -105,8 +113,10 @@ public class OperationsOnCollections {
 			
 			That returns a new stream consisting of the elements that satisfy the given predicate.
 
-			Since this method returns a stream, it represents an intermediate operation, which basically means that you can chain any number of filters or other intermediate operations:
+			Since this method returns a stream, it represents an intermediate operation, 
+			which basically means that you can chain any number of filters or other intermediate operations:
            */
+			
 			List<String> words2 = Arrays.asList("hello", null, "");
 			words2.stream()
 			    .filter(t -> t != null) // ["hello", ""]

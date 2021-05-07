@@ -1,4 +1,4 @@
-package java8.streams;
+package com.java8.streams;
 
 import java.util.stream.*;
 
