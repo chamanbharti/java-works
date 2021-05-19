@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import dreamsol.model.User;
 import dreamsol.repository.UserRepository;
 
-//@SpringBootApplication
+@SpringBootApplication
 //@EnableAutoConfiguration
 //@SpringBootConfiguration
 //public class Application {
@@ -20,7 +20,7 @@ import dreamsol.repository.UserRepository;
 //	}
 //}
 
-@SpringBootConfiguration
+//@SpringBootConfiguration
 public class Application implements CommandLineRunner{
 	
 	@Autowired
